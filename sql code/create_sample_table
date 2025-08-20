@@ -1,0 +1,14 @@
+-- Create a table
+CREATE TABLE Employees (
+    EmployeeId INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(100),
+    LastName NVARCHAR(100),
+    HireDate DATE DEFAULT GETDATE()
+);
+
+-- Insert data
+INSERT INTO Employees (FirstName, LastName) 
+VALUES ('Ada', 'Lovelace'), ('Alan', 'Turing');
+
+-- Query data
+SELECT * FROM Employees;

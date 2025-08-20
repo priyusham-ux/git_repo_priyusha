@@ -1,0 +1,40 @@
+{
+	"name": "DelimitedText2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "Output",
+				"container": "cont-prct1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "2",
+				"type": "String"
+			},
+			{
+				"name": "Architect Group",
+				"type": "String"
+			},
+			{
+				"name": "30001",
+				"type": "String"
+			},
+			{
+				"name": "L0001",
+				"type": "String"
+			}
+		]
+	}
+}

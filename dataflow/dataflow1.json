@@ -6,51 +6,40 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable3",
+						"referenceName": "AzureSqlTable5",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
 				},
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable4",
+						"referenceName": "AzureSqlTable6",
 						"type": "DatasetReference"
 					},
 					"name": "source2"
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "join1"
-				}
-			],
+			"transformations": [],
 			"scriptLines": [
 				"source(output(",
-				"          SaleId as integer,",
-				"          CustomerName as string,",
-				"          Amount as decimal(18,2),",
-				"          SaleDate as timestamp",
+				"          EmployeeID as integer,",
+				"          EmployeeName as string,",
+				"          DepartmentID as integer,",
+				"          HireDate as date",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
 				"source(output(",
-				"          EmployeeId as integer,",
-				"          FirstName as string,",
-				"          LastName as string,",
-				"          HireDate as date",
+				"          DepartmentID as integer,",
+				"          DepartmentName as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source2",
-				"source1, source2 join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
-				"     joinType:'right',",
-				"     matchType:'exact',",
-				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> join1"
+				"     format: 'table') ~> source2"
 			]
 		}
 	}

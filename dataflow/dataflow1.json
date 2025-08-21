@@ -5,14 +5,31 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"dataset": {
+						"referenceName": "AzureSqlTable3",
+						"type": "DatasetReference"
+					},
 					"name": "source1"
+				},
+				{
+					"name": "source2"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
+				"source(output(",
+				"          SaleId as integer,",
+				"          CustomerName as string,",
+				"          Amount as decimal(18,2),",
+				"          SaleDate as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> source1",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> source1"
+				"     validateSchema: false) ~> source2"
 			]
 		}
 	}

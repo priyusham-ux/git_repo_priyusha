@@ -29,7 +29,8 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
-				"source1 aggregate(groupBy(Price)) ~> aggregate1"
+				"source1 aggregate(groupBy(ProductID),",
+				"     Price = max(price)) ~> aggregate1"
 			]
 		}
 	}

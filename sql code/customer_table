@@ -1,0 +1,16 @@
+CREATE TABLE Customer (
+    CustomerID INT IDENTITY(1,1) PRIMARY KEY,   -- Auto-incremented ID
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    Phone NVARCHAR(15),
+    City NVARCHAR(50),
+    CreatedDate DATETIME DEFAULT GETDATE()      -- Defaults to current date
+);
+INSERT INTO Customer (FirstName, LastName, Email, Phone, City)
+VALUES
+('John', 'Doe', 'john.doe@example.com', '123-456-7890', 'New York'),
+('Alice', 'Smith', 'alice.smith@example.com', '234-567-8901', 'Los Angeles'),
+('Bob', 'Johnson', 'bob.johnson@example.com', '345-678-9012', 'Chicago'),
+('Grace', 'Hopper', 'grace.hopper@example.com', '456-789-0123', 'San Francisco'),
+('Alan', 'Turing', 'alan.turing@example.com', '567-890-1234', 'Boston');

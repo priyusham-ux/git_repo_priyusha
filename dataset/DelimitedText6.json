@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat(dataset().fileName,'.')",
+					"type": "Expression"
+				},
 				"container": "cont-prct1"
 			},
 			"columnDelimiter": ",",

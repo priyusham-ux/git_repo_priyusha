@@ -25,7 +25,13 @@
 				"inputs": [
 					{
 						"referenceName": "AzureSqlTable10",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"tableName": {
+								"value": "@pipeline().parameters.tableName",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

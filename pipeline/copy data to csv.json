@@ -56,7 +56,13 @@
 				"outputs": [
 					{
 						"referenceName": "DelimitedText6",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": {
+								"value": "@concat(pipeline().parameters.fileName,'.csv')",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

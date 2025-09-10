@@ -68,8 +68,14 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "TableList",
-									"type": "DatasetReference"
+									"referenceName": "sqlTable",
+									"type": "DatasetReference",
+									"parameters": {
+										"tableName": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}

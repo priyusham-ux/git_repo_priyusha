@@ -2,7 +2,7 @@
 	"name": "TableList",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabase1sanls",
+			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],

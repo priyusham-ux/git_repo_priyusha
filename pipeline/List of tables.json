@@ -24,7 +24,8 @@
 					"dataset": {
 						"referenceName": "TableList",
 						"type": "DatasetReference"
-					}
+					},
+					"firstRowOnly": false
 				}
 			}
 		],

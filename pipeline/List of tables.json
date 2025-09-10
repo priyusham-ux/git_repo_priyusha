@@ -39,7 +39,13 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('ListTables').output.value",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"annotations": []

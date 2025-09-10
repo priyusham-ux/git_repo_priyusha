@@ -31,14 +31,7 @@
 			{
 				"name": "For Each table",
 				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "ListTables",
-						"dependencyConditions": [
-							"Completed"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
